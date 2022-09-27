@@ -1,0 +1,16 @@
+fragment ComponentBlocksHeroFragment on ComponentBlocksHero {
+  __typename
+  heading
+  image {
+    data {
+      attributes {
+        url
+      }
+    }
+  }
+  description
+  button {
+    label
+    href
+  }
+}

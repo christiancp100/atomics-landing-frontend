@@ -1,0 +1,44 @@
+# Write your query or mutation here
+query GetPages($slug: String) {
+  pages(filters: { slug: { contains: $slug } }, pagination: { limit: 1 }) {
+    data {
+      id
+      attributes {
+        title
+        slug
+        SEOComponent {
+          metaTitle
+          metaDescription
+          metaImage {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
+        blocks {
+          ... on ComponentBlocksHero {
+            __typename
+            heading
+            image {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+            description
+            button {
+              label
+              href
+            }
+          }
+          ... on Error {
+            code
+          }
+        }
+      }
+    }
+  }
+}

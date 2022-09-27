@@ -1,0 +1,30 @@
+#import "./ComponentBlocksHeroFragment.graphql"
+
+fragment PageFragment on Page {
+  data {
+    id
+    attributes {
+      title
+      slug
+      SEOComponent {
+        metaTitle
+        metaDescription
+        metaImage {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+      }
+      blocks {
+        ... on ComponentBlocksHero {
+          ...ComponentBlocksHeroFragment
+        }
+        ... on Error {
+          code
+        }
+      }
+    }
+  }
+}
