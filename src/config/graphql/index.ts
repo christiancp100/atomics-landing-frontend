@@ -1,11 +1,9 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client';
-import { apiUrl } from '../environment';
+import { graphqlUrl } from '../environment';
 
 const client = new ApolloClient({
-  uri: apiUrl,
+  uri: graphqlUrl,
   cache: new InMemoryCache(),
 });
-
-console.log(`apiUrl`, apiUrl);
 
 export default client;

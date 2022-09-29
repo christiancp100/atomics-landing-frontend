@@ -1,51 +1,88 @@
+import useClickOutside from '@/hooks/useClickOutside';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
-import Button from '../../ui/button';
+import React, { HTMLProps, useRef, useState } from 'react';
+import Button, { Variant } from '../../ui/button';
+import Hamburger from './hamburger';
+import LeftPanel from './left-panel';
+import RightPanel from './right-panel';
 
-const HamburgerMenu = () => (
-  <div>
-    <button className="relative group">
-      <div className="relative flex overflow-hidden items-center justify-center rounded-full w-16 h-16 bg-primary shadow-md">
-        <div className="flex flex-col justify-center">
-          <div className="bg-black h-1 w-7 rounded-full mb-2 transition-all duration-200 group-hover:rotate-45 group-hover:translate-y-1 group-hover:opacity-100 origin-center"></div>
-          <div className="self-end bg-black h-1 w-5 rounded-full transition-all duration-200 group-hover:-rotate-45 group-hover:-translate-y-1 group-hover:opacity-100 origin-center group-hover:w-7"></div>
-        </div>
-      </div>
-    </button>
-  </div>
-);
+export interface EntryProps {
+  title: string;
+  href: string;
+  featured?: boolean;
+  variant?: Variant;
+}
 
-const Menu = () => {
+interface Props {
+  entries: Array<EntryProps>;
+}
+
+const disableScroll = () => {
+  window.onscroll = () => {
+    window.scrollTo(0, 0);
+  };
+};
+
+function enableScroll() {
+  window.onscroll = () => {};
+}
+
+const Menu: React.FC<Props> = ({ entries }) => {
+  const [isOpened, setIsOpened] = useState(false);
+  const menuRef = useRef(null);
+  const hamburgerRef = useRef(null);
+  useClickOutside(
+    menuRef,
+    () => {
+      setIsOpened(false);
+    },
+    { exceptions: [hamburgerRef] },
+  );
+
   return (
-    <nav id="navbar" className="relative z-10 w-full text-neutral-800">
-      <div className="flex flex-col max-w-screen-xl lg:items-center lg:justify-between lg:flex-row py-4">
-        <div className="flex flex-row items-center space-x-4 xl:space-x-8">
-          <div className="relative w-full flex flex-row items-center justify-between py-6">
-            <div className="relative w-48 xl:w-56 h-24">
-              <Image
-                src="/img/atomics_complete.png"
-                layout="fill"
-                objectFit="contain"
-                alt="Nefa Logo"
+    <>
+      <div className="sticky top-0 z-50" ref={menuRef}>
+        <LeftPanel isOpened={isOpened} />
+        <RightPanel entries={entries} isOpened={isOpened} />
+      </div>
+      <nav className="text-neutral-800 sm:mx-16 mx-8">
+        <div className="flex tems-center justify-between flex-row py-4">
+          <div className="flex flex-row items-center space-x-4 xl:space-x-8">
+            <div className="relative w-full flex flex-row items-center justify-between py-6">
+              <div className="relative w-48 xl:w-56 h-24">
+                <Image
+                  src="/img/atomics_complete.png"
+                  layout="fill"
+                  objectFit="contain"
+                  alt="Atomics Logo"
+                />
+              </div>
+            </div>
+          </div>
+          <div className={`flex items-center justify-start space-x-8`}>
+            <div className="hidden md:flex space-x-3">
+              {entries
+                .filter((e) => e.featured)
+                .map((entry) => (
+                  <Link key={entry.href} href={entry.href}>
+                    <Button variant={entry.variant}>{entry.title}</Button>
+                  </Link>
+                ))}
+            </div>
+            <div className="z-50" ref={hamburgerRef}>
+              <Hamburger
+                isOpened={isOpened}
+                onClick={(e) => {
+                  isOpened ? enableScroll() : disableScroll();
+                  setIsOpened(!isOpened);
+                }}
               />
             </div>
-            <button className="rounded-lg lg:hidden focus:outline-none focus:shadow-outline">
-              x
-            </button>
           </div>
         </div>
-        <div className={`flex items-center justify-start space-x-8`}>
-          <div className="hidden md:flex space-x-3">
-            <Button variant="link">Academy</Button>
-            <Button className="" variant="default">
-              Contacto
-            </Button>
-          </div>
-          <HamburgerMenu />
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </>
   );
 };
 

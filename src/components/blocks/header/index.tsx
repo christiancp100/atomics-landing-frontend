@@ -38,6 +38,7 @@ const Header = () => {
         className="hidden relative sm:block col-span-12 lg:col-span-6"
       >
         <Image
+          priority
           src="/img/hero.svg"
           alt="hero"
           layout="fill"

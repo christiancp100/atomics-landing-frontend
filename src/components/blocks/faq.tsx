@@ -6,7 +6,7 @@ import Animated, { animations } from '../ui/animations';
 
 export const FAQ = () => {
   return (
-    <BaseSection className="w-full my-24 mb-96">
+    <BaseSection className="w-full my-24">
       <Animated
         animation={animations.fadeRight}
         className="col-span-12 lg:col-span-6"
