@@ -8,6 +8,7 @@ import BlockSection from '@/components/blocks/sections/block-section';
 import { FAQ } from '@/components/blocks/faq';
 import EnumerateSection from '@/components/blocks/sections/enumarete-section';
 import Footer from '@/components/blocks/footer';
+import Contact from '@/components/blocks/contact';
 
 export default function Home() {
   const { page, loading } = useGetPage(`homepage`);
@@ -58,6 +59,7 @@ export default function Home() {
           <EnumerateSection />
           <Steps />
           <FAQ />
+          <Contact />
         </main>
       </div>
       <Footer entries={entriesCte} />
