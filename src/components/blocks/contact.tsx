@@ -38,7 +38,7 @@ const Contact = () => {
     },
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     setStatus(STATUS.loading);
     e.preventDefault();
     const fd = new FormData(e.target);
@@ -51,7 +51,7 @@ const Contact = () => {
       services: selectedServices,
     };
 
-    fetch(contactUrl, {
+    fetch(contactUrl!, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -75,7 +75,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="my-20 relative px-4 mt-8 text-justify">
+    <div id="contact" className="my-20 relative px-4 mt-8 text-justify">
       <h2 className="text-4xl font-semibold text-center sm:text-left">
         <span className="text-header-gradient">Creemos</span> algo juntos
       </h2>
@@ -127,6 +127,7 @@ const Contact = () => {
                 type="checkbox"
                 placeholder="Hola"
                 name="accept"
+                required
                 text={
                   <span>
                     Acepto la{' '}

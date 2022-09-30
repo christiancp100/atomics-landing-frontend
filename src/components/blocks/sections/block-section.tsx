@@ -2,6 +2,7 @@ import BaseSection from '@/components/layout/base-section';
 import Animated, { animations } from '@/components/ui/animations';
 import Button from '@/components/ui/button';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { HTMLProps } from 'react';
 
 const BlockSection: React.FC<HTMLProps<HTMLDivElement>> = ({
@@ -56,8 +57,12 @@ const BlockSection: React.FC<HTMLProps<HTMLDivElement>> = ({
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button variant="primary">¡Empecemos!</Button>
-          <Button variant="secondary">Ver proyectos</Button>
+          <Link href="#contact">
+            <Button variant="primary">¡Empecemos!</Button>
+          </Link>
+          <Link href="/projects">
+            <Button variant="secondary">Ver proyectos</Button>
+          </Link>
         </div>
       </Animated>
       <Animated

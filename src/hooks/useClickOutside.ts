@@ -6,7 +6,7 @@ interface Options {
 
 const useClickOutside = (ref: any, handler: any, options: Options) => {
   useEffect(() => {
-    const includesTarget = (ref, event: Event) =>
+    const includesTarget = (ref: any, event: Event) =>
       !ref.current || ref.current.contains(event.target);
 
     const listener = (e: Event) => {
@@ -24,7 +24,7 @@ const useClickOutside = (ref: any, handler: any, options: Options) => {
       document.removeEventListener('mousedown', listener);
       document.removeEventListener('touchstart', listener);
     };
-  }, [ref, handler]);
+  }, [ref, handler, options.exceptions]);
 };
 
 export default useClickOutside;

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { AppProps } from 'next/app';
 import '@/styles/globals.css';
 import client from '@/config/graphql';

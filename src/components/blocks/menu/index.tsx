@@ -50,14 +50,16 @@ const Menu: React.FC<Props> = ({ entries }) => {
         <div className="flex tems-center justify-between flex-row py-4">
           <div className="flex flex-row items-center space-x-4 xl:space-x-8">
             <div className="relative w-full flex flex-row items-center justify-between py-6">
-              <div className="relative w-48 xl:w-56 h-24">
-                <Image
-                  src="/img/atomics_complete.png"
-                  layout="fill"
-                  objectFit="contain"
-                  alt="Atomics Logo"
-                />
-              </div>
+              <Link onClick={enableScroll} href="/">
+                <div className="cursor-pointer relative w-48 xl:w-56 h-24">
+                  <Image
+                    src="/img/atomics_complete.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Atomics Logo"
+                  />
+                </div>
+              </Link>
             </div>
           </div>
           <div className={`flex items-center justify-start space-x-8`}>

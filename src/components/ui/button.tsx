@@ -33,7 +33,7 @@ const Button: React.FC<ButtonProps> = React.forwardRef<
       <button
         disabled={loading}
         ref={ref}
-        className={`disabled:cursor-not-allowed inline-flex items-center px-4 py-2 font-medium ${variantClassNames} ${
+        className={`disabled:cursor-not-allowed inline-flex justify-center items-center px-4 py-2 font-medium ${variantClassNames} ${
           className ?? ``
         }`}
         {...rest}

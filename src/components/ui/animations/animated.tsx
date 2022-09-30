@@ -28,7 +28,7 @@ const Animated: React.FC<Props> = ({
     } else {
       replay && control.start(`initial`);
     }
-  }, [control, inView]);
+  }, [control, inView, replay]);
 
   return (
     <motion.div

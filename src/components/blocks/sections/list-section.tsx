@@ -3,6 +3,7 @@ import Animated from '@/components/ui/animations';
 import Button from '@/components/ui/button';
 import ListItem from '@/components/ui/list-item';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
@@ -50,12 +51,14 @@ const ListSection: React.FC<Props> = ({ image, ...rest }) => {
           <ListItem title="Gestión íntegra de redes sociales." />
           <ListItem title="Tramitación de subvenciones estatales." />
         </ul>
-        <Button
-          variant="secondary"
-          className="w-full sm:max-w-[240px] px-10 py-4 bg-inherit text-gradient border text-base"
-        >
-          ¡Tomemos un café!
-        </Button>
+        <Link href="#contact">
+          <Button
+            variant="secondary"
+            className="w-full sm:max-w-[240px] px-10 py-4 bg-inherit text-gradient border text-base"
+          >
+            ¡Tomemos un café!
+          </Button>
+        </Link>
       </Animated>
     </BaseSection>
   );

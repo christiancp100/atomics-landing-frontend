@@ -1,13 +1,11 @@
 import useGetPage from '@/api/hooks/useGetPage';
-import Menu, { EntryProps } from '@/components/blocks/menu';
-import Header from '@/components/blocks/header';
+import Header from '@/components/blocks/header/header';
 import Clients from '@/components/blocks/clients';
 import ListSection from '@/components/blocks/sections/list-section';
 import Steps from '@/components/blocks/sections/steps';
 import BlockSection from '@/components/blocks/sections/block-section';
 import { FAQ } from '@/components/blocks/faq';
 import EnumerateSection from '@/components/blocks/sections/enumarete-section';
-import Footer from '@/components/blocks/footer';
 import Contact from '@/components/blocks/contact';
 import BaseLayout from '@/components/layout/base-layout';
 

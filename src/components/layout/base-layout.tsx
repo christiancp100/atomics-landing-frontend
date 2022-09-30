@@ -1,7 +1,6 @@
-import React, { HTMLProps } from 'react';
+import React, { HTMLProps, useEffect } from 'react';
 import Footer from '../blocks/footer';
 import Menu, { EntryProps } from '../blocks/menu';
-import Head from '../seo/head';
 
 interface Props extends HTMLProps<HTMLDivElement> {
   children: React.ReactNode;
@@ -36,9 +35,12 @@ const entriesCte: Array<EntryProps> = [
 ];
 
 const BaseLayout: React.FC<Props> = ({ children, page, ...rest }) => {
+  useEffect(() => {
+    window.onscroll = () => {};
+  }, []);
   return (
     <>
-      <Head seo={page.seo} />
+      {/* <Head seo={page.seo} /> */}
       <Menu entries={entriesCte} />
       <div className="sm:mx-16 mx-8" {...rest}>
         {children}

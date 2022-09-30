@@ -3,10 +3,10 @@ import ClientLogo from '@/components/ui/client-logo';
 import React from 'react';
 
 const clients = [
-  {
-    src: `/img/clients/strapi.svg`,
-    alt: `Strapi logo`,
-  },
+  // {
+  //   src: `/img/clients/strapi.svg`,
+  //   alt: `Strapi logo`,
+  // },
   {
     src: `/img/clients/vipkel.svg`,
     alt: `vipkel logo`,
