@@ -6,5 +6,6 @@ const env = {
 
 const graphqlUrl = `${process.env.NEXT_PUBLIC_API_URL}/graphql`;
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const contactUrl = process.env.NEXT_PUBLIC_CONTACT_FORM_URL;
 
-export { apiUrl, env, graphqlUrl };
+export { apiUrl, env, graphqlUrl, contactUrl };

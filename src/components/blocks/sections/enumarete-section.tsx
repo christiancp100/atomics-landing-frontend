@@ -7,7 +7,7 @@ import React from 'react';
 
 const EnumerateSection = () => {
   return (
-    <BaseSection className="my-48 shadow-none">
+    <BaseSection className="my-24 shadow-none">
       <Animated
         animation={animations.fadeRight}
         className="relative col-span-12 lg:col-span-6"

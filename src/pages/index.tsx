@@ -9,6 +9,7 @@ import { FAQ } from '@/components/blocks/faq';
 import EnumerateSection from '@/components/blocks/sections/enumarete-section';
 import Footer from '@/components/blocks/footer';
 import Contact from '@/components/blocks/contact';
+import BaseLayout from '@/components/layout/base-layout';
 
 export default function Home() {
   const { page, loading } = useGetPage(`homepage`);
@@ -17,52 +18,21 @@ export default function Home() {
     return <h1>Loading...</h1>;
   }
 
-  const entriesCte: Array<EntryProps> = [
-    {
-      title: 'Inicio',
-      href: '/',
-    },
-    {
-      title: 'Servicios',
-      href: '/services',
-    },
-    {
-      title: 'Proyectos',
-      href: '/work',
-    },
-    {
-      title: 'Academy',
-      href: '/academy',
-      featured: true,
-      variant: 'link',
-    },
-    {
-      title: 'Contacto',
-      href: '/contact',
-      featured: true,
-      variant: 'default',
-    },
-  ];
-
   return (
-    <div className="relative">
-      <Menu entries={entriesCte} />
-      <div className="sm:mx-16 mx-8">
-        <Header />
-        <main>
-          <Clients />
-          <ListSection
-            image={{ src: '/img/grow.svg', alt: '' }}
-            className="mb-20"
-          />
-          <BlockSection />
-          <EnumerateSection />
-          <Steps />
-          <FAQ />
-          <Contact />
-        </main>
-      </div>
-      <Footer entries={entriesCte} />
-    </div>
+    <BaseLayout page={page}>
+      <Header />
+      <main>
+        <Clients />
+        <ListSection
+          image={{ src: '/img/grow.svg', alt: '' }}
+          className="mb-20"
+        />
+        <BlockSection />
+        <EnumerateSection />
+        <Steps />
+        <FAQ />
+        <Contact />
+      </main>
+    </BaseLayout>
   );
 }

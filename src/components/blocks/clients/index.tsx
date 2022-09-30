@@ -23,7 +23,7 @@ const clients = [
 
 const Clients = () => {
   return (
-    <section className="relative my-12 sm:rounded-2xl overflow-hidden">
+    <section className="relative mt-12 sm:rounded-2xl overflow-hidden">
       <div className="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-8 text-center">
         <Animated animation={animations.fadeUp}>
           <h3 className="text-2xl text-neutral-800 font-semibold">

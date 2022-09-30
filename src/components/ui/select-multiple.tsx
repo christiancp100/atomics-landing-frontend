@@ -12,6 +12,8 @@ interface ISelectMultiple {
     value: string;
     title: string;
   }>;
+  selectedOptions: Array<string>;
+  setSelectedOptions: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
 const Option: React.FC<IOption> = ({
@@ -41,8 +43,11 @@ const Option: React.FC<IOption> = ({
   );
 };
 
-const SelectMultiple: React.FC<ISelectMultiple> = ({ options }) => {
-  const [selectedOptions, setSelectedOptions] = useState<Array<string>>([]);
+const SelectMultiple: React.FC<ISelectMultiple> = ({
+  selectedOptions,
+  setSelectedOptions,
+  options,
+}) => {
   return (
     <div className="flex gap-6 flex-wrap">
       {options &&
