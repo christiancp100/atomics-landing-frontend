@@ -1,6 +1,7 @@
 import React, { HTMLProps, useEffect } from 'react';
 import Footer from '../blocks/footer';
 import Menu, { EntryProps } from '../blocks/menu';
+import Head from '../seo/head';
 
 interface Props extends HTMLProps<HTMLDivElement> {
   children: React.ReactNode;
@@ -42,7 +43,7 @@ const BaseLayout: React.FC<Props> = ({ children, page, ...rest }) => {
   }, []);
   return (
     <>
-      {/* <Head seo={page.seo} /> */}
+      <Head seo={page.seo} />
       <Menu entries={entriesCte} />
       <div className="sm:mx-16 mx-8" {...rest}>
         {children}

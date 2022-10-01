@@ -70,7 +70,7 @@ const BlockSection: React.FC<HTMLProps<HTMLDivElement>> = ({
         className="relative col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8"
       >
         <Image
-          src="/img/hero.png"
+          src="/img/hero.webp"
           layout="fill"
           alt="offer image"
           objectFit="cover"
