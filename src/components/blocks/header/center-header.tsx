@@ -135,7 +135,7 @@ const CenterHeader = () => {
       </div>
       <div className="col-span-6 mt-12">
         <span className="text-4xl font-black">
-          Necesitas algo más especfífico?
+          Necesitas algo más específico?
         </span>
         <ul className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-10 mt-12">
           {technicalServices.map((service) => (

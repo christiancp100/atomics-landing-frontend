@@ -11,6 +11,8 @@ const entriesCte: Array<EntryProps> = [
   {
     title: 'Inicio',
     href: '/',
+    featured: true,
+    variant: 'link',
   },
   {
     title: 'Servicios',

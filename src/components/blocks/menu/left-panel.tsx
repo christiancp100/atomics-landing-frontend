@@ -17,7 +17,7 @@ const LeftPanel: React.FC<Props> = ({ isOpened }) => {
     >
       <div className={styles.logo}>
         <Image
-          src="/img/atomics_complete.png"
+          src="/img/atomics_complete.svg"
           layout="fill"
           objectFit="contain"
           alt="Atomics Logo"

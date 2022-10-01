@@ -1,7 +1,7 @@
 import useClickOutside from '@/hooks/useClickOutside';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { HTMLProps, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Button, { Variant } from '../../ui/button';
 import Hamburger from './hamburger';
 import LeftPanel from './left-panel';
@@ -53,7 +53,7 @@ const Menu: React.FC<Props> = ({ entries }) => {
               <Link onClick={enableScroll} href="/">
                 <div className="cursor-pointer relative w-48 xl:w-56 h-24">
                   <Image
-                    src="/img/atomics_complete.png"
+                    src="/img/atomics_complete.svg"
                     layout="fill"
                     objectFit="contain"
                     alt="Atomics Logo"

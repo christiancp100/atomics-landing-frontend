@@ -75,7 +75,10 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="my-20 relative px-4 mt-8 text-justify">
+    <div
+      id="contact"
+      className="my-20 relative px-4 mt-8 text-justify overflow-hidden"
+    >
       <h2 className="text-4xl font-semibold text-center sm:text-left">
         <span className="text-header-gradient">Creemos</span> algo juntos
       </h2>
