@@ -6,7 +6,7 @@ const TextArea: React.FC<HTMLProps<HTMLTextAreaElement>> = ({
 }) => {
   return (
     <textarea
-      className={`pb-1 border-2 border-black border-separate border-spacing-8  focus:outline-none ${
+      className={`pb-1 border-2 border-black border-separate border-spacing-8 focus:ring-0 focus:border-primary  focus:outline-none ${
         className ?? ''
       }`}
       {...rest}
