@@ -32,7 +32,7 @@ export default function Work() {
         <span className="font-bold text-3xl text-center w-full">
           Estamos diseñando un programa de formación increíble
         </span>
-        <span>Cuando esté listo lo verás</span>
+        <span>Quieres enterarte antes que nadie?</span>
         <form
           onSubmit={handleSubmit}
           className="flex flex-col md:flex-row gap-y-4 w-full justify-center"
