@@ -29,7 +29,7 @@ export default function Work() {
         <div className="relative h-72 w-96">
           <Image src="/img/academy.svg" layout="fill" />
         </div>
-        <span className="font-bold text-3xl w-2/3 text-center w-full">
+        <span className="font-bold text-3xl text-center w-full">
           Estamos diseñando un programa de formación increíble
         </span>
         <span>Cuando esté listo lo verás</span>
