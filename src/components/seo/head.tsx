@@ -1,7 +1,11 @@
 import React from 'react';
 import NextHead from 'next/head';
 
-const Head = () => {
+interface Props {
+  seo: any;
+}
+
+const Head: React.FC<Props> = ({ seo }) => {
   return (
     <NextHead>
       <title>Atomics</title>

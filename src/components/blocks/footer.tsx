@@ -34,6 +34,7 @@ const Footer: React.FC<FooterProps> = ({ entries }) => {
             src={'/img/atomics-logo-positive.svg'}
             layout="fill"
             objectFit="contain"
+            alt="Atomics logo"
           />
         </div>
         <span className="block text-white font-bold text-lg mb-4">

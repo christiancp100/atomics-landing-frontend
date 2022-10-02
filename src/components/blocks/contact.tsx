@@ -1,4 +1,5 @@
 import { contactUrl } from '@/config/environment';
+import useSubmitContact from '@/hooks/useSubmitContact';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
@@ -18,7 +19,7 @@ const STATUS = {
 
 const Contact = () => {
   const [selectedServices, setSelectedServices] = useState<Array<string>>([]);
-  const [status, setStatus] = useState(STATUS.notSubmitted);
+  const { submit, status } = useSubmitContact(contactUrl!);
   const options = [
     {
       title: 'Desarrollo web',
@@ -39,10 +40,8 @@ const Contact = () => {
   ];
 
   const handleSubmit = (e: any) => {
-    setStatus(STATUS.loading);
     e.preventDefault();
     const fd = new FormData(e.target);
-
     const data = {
       name: fd.get('name'),
       email: fd.get('email'),
@@ -50,28 +49,7 @@ const Contact = () => {
       description: fd.get('description'),
       services: selectedServices,
     };
-
-    fetch(contactUrl!, {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    })
-      .then((response) => {
-        if (response.status !== 200) {
-          throw new Error(response.statusText);
-        }
-
-        return response.json();
-      })
-      .then(() => {
-        setStatus(STATUS.submitted);
-        e.target.reset();
-        setSelectedServices([]);
-      })
-      .catch(() => setStatus(STATUS.error));
+    submit(e, data, () => setSelectedServices([]));
   };
 
   return (
