@@ -8,9 +8,6 @@ const Header = () => {
   return (
     <header className="relative mx-auto grid grid-cols-12 mb-12">
       <div className="col-span-12 lg:col-span-6 mt-12 xl:mt-10 space-y-4 sm:space-y-6 text-center sm:text-left">
-        <span className="text-2xl text-header-gradient font-semibold uppercase">
-          ¡Hola!
-        </span>
         <Animated animation={animations.fadeRight} replay={false}>
           <h1 className="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-snug sm:pr-8 xl:pr-10">
             Desarrollo de software a medida para{` `}
