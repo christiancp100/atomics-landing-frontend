@@ -8,7 +8,7 @@ import React from 'react';
 
 const EnumerateSection = () => {
   return (
-    <BaseSection className="my-24 shadow-none">
+    <BaseSection className="my-24 shadow-none items-center">
       <Animated
         animation={animations.fadeRight}
         className="relative col-span-12 lg:col-span-6"
@@ -17,7 +17,9 @@ const EnumerateSection = () => {
           src="/img/shopping.svg"
           objectFit="contain"
           alt="ecommerce page"
-          layout="fill"
+          layout="responsive"
+          width={500}
+          height={500}
         />
       </Animated>
 

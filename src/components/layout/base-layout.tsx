@@ -46,7 +46,7 @@ const BaseLayout: React.FC<Props> = ({ children, page, ...rest }) => {
       <Head seo={page?.seo} />
       <Menu className="lg:w-9/12 w-full self-center" entries={entriesCte} />
       <div
-        className="sm:mx-16 mx-8 flex justify-center flex-col items-center"
+        className="sm:mx-16 mx-4 flex justify-center flex-col items-center"
         {...rest}
       >
         <div className="w-full lg:w-9/12">{children}</div>
