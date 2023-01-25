@@ -16,12 +16,12 @@ const social = [
   {
     src: '/img/linkedin.svg',
     alt: 'Linkedin logo',
-    href: '/',
+    href: 'https://www.linkedin.com/company/atomics-software/',
   },
   {
     src: '/img/medium.svg',
     alt: 'Meium logo',
-    href: '/',
+    href: 'https://medium.com/@atomics-software',
   },
 ];
 
