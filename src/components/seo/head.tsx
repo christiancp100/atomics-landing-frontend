@@ -10,7 +10,7 @@ interface Props {
 const Head: React.FC<Props> = ({ title, seo = {} }) => {
   const {
     metaTitle = 'Agencia de Desarrollo de Software a Medida | atomics.es',
-    metaDescription = 'Atomics es tu solución para desarrollo software personalizado, tiendas en línea, estrategias de marketing y éxito digital. Soluciones y servicios de alta calidad para crecer tu negocio y destacarte entre tu competencia. ¡Conviértete en líder en tu industria con Atomics!',
+    metaDescription = 'Desarrollo software, e-commerce y marketing. Servicios de alta calidad para destacar entre tu competencia. ¡Conviértete en líder en tu industria con Atomics!',
     metaImage = 'https://atomics.es/img/atomics_complete.svg',
     keywords = 'Agencia de desarrollo de software, software a medida, tiendas en línea, gestión de redes sociales, campañas de marketing, soluciones personalizadas, servicios de alta calidad, desarrollo web, galicia, empresario tradicional, tienda online fácil',
   } = seo;
