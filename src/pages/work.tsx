@@ -9,7 +9,7 @@ export default function Work() {
   const { page, loading } = useGetPage(`work`);
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <span>Loading...</span>;
   }
 
   return (

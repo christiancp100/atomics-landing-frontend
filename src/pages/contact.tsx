@@ -6,7 +6,7 @@ export default function ContactPage() {
   const { page, loading } = useGetPage(`homepage`);
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <span>Loading...</span>;
   }
 
   return (
