@@ -6,8 +6,18 @@ import useSubmitContact, { STATUS } from '@/hooks/useSubmitContact';
 import Image from 'next/image';
 
 export default function Work() {
-  const { page, loading } = useGetPage(`contact`);
   const { status, submit } = useSubmitContact(academyContactUrl!);
+
+  const page: API.Page = {
+    blocks: [],
+    title: 'Academy',
+    seo: {
+      metaDescription:
+        'Aprende a programar desde cero con Atomics Academy. Nuestro curso te prepara para ser un desarrollador exitoso y destacar en el mercado laboral.',
+      keywords:
+        'academia, aprender desarrollo software, galicia, coruña, javascript, html, css, crear paginas web, curso de programacion, mercado laboral, trabajo remoto',
+    },
+  };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -18,10 +28,6 @@ export default function Work() {
     };
     submit(e, data);
   };
-
-  if (loading) {
-    return <span>Loading...</span>;
-  }
 
   return (
     <BaseLayout page={page}>

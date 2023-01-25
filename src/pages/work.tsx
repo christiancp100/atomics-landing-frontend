@@ -6,11 +6,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Work() {
-  const { page, loading } = useGetPage(`work`);
-
-  if (loading) {
-    return <span>Loading...</span>;
-  }
+  const page: API.Page = {
+    blocks: [],
+    title: 'Proyectos',
+    seo: {
+      metaDescription:
+        'Echa un vistazo a nuestros proyectos: desarrollo de software, tiendas en línea y estrategias de marketing innovadoras de alta calidad.',
+      keywords:
+        'contacto, agencia desarrollo software, galicia, coruña, tienda en linea, comercio electronico, tienda online facil, proyectos',
+    },
+  };
 
   return (
     <BaseLayout page={page}>

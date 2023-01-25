@@ -1,4 +1,3 @@
-import useGetPage from '@/api/hooks/useGetPage';
 import Header from '@/components/blocks/header/header';
 import Clients from '@/components/blocks/clients';
 import ListSection from '@/components/blocks/sections/list-section';
@@ -10,12 +9,11 @@ import Contact from '@/components/blocks/contact';
 import BaseLayout from '@/components/layout/base-layout';
 
 export default function Home() {
-  const { page, loading } = useGetPage(`homepage`);
-
-  if (loading) {
-    return <span>Loading...</span>;
-  }
-
+  const page: API.Page = {
+    blocks: [],
+    title: 'Inicio',
+    seo: {},
+  };
   return (
     <BaseLayout page={page}>
       <Header />
