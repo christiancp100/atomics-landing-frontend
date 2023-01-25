@@ -14,7 +14,7 @@ const EnumerateSection = () => {
         className="relative col-span-12 lg:col-span-6"
       >
         <Image
-          src="/img/shopping.svg"
+          src="/img/shopping.png"
           objectFit="contain"
           alt="ecommerce page"
           layout="responsive"
