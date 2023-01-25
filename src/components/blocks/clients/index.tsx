@@ -29,9 +29,9 @@ const Clients = () => {
           <h3 className="text-2xl text-neutral-800 font-semibold">
             Estas PYMES y Start-ups ya confían en nosotros
           </h3>
-          <p className="paragraph">
-            Únete a la familia de empresas que ya depositaron toda su confianza
-            en nosotros.
+          <p className="paragraph max-w-xl">
+            Y juntos, hemos trabajado codo con codo para alcanzar sus objetivos.
+            Únete a nosotros y forma parte de nuestra comunidad de éxito.
           </p>
         </Animated>
         <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">

@@ -13,15 +13,17 @@ const Header = () => {
         </span>
         <Animated animation={animations.fadeRight} replay={false}>
           <h1 className="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-snug sm:pr-8 xl:pr-10">
-            Somos tu nuevo{` `}
-            <span className="text-header-gradient">equipo de Ingeniería</span>
+            Desarrollo de software a medida para{` `}
+            <span className="text-header-gradient">PYMES y Start-ups</span>
           </h1>
         </Animated>
         <Animated animation={animations.fadeDown}>
           <p className="paragraph hidden sm:block">
-            Tú nos dices lo que quieres, nosotros te damos lo que necesitas.
-            Somos la agencia digital a la que acudir para construir tus ideas o
-            aumentar el alcance de tu negocio.
+            Trabajaremos en estrecha colaboración contigo para asegurarnos de
+            que tu proyecto sea un éxito. Si estás buscando un equipo confiable
+            y dedicado para ayudarte a llevar tu negocio al siguiente nivel, no
+            dudes en contactarnos. Estamos aquí para ayudarte a crecer y
+            prosperar.
           </p>
         </Animated>
         <Animated

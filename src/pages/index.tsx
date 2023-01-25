@@ -25,8 +25,8 @@ export default function Home() {
           image={{ src: '/img/grow.svg', alt: '' }}
           className="mb-20"
         />
-        <BlockSection />
         <EnumerateSection />
+        <BlockSection />
         <Steps />
         <FAQ />
         <Contact />

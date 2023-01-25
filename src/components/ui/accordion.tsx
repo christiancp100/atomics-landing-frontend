@@ -61,15 +61,17 @@ const AccordionElement: React.FC<AccordionElementProps> = ({
   );
 };
 
-const Accordion = () => {
+const Accordion = ({ questions }) => {
   return (
     <li>
-      <AccordionElement
-        question="¿Cómo te llamas?"
-        answer="pues christian Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veritatis accusamus sequi labore hic aliquid accusantium voluptatem consequatur amet corporis et repudiandae, distinctio culpa fuga saepe eos blanditiis deleniti quibusdam, ea perferendis dolore praesentium vero. Itaque fugit libero, nemo alias incidunt provident voluptatibus laudantium mollitia consequatur ullam similique nihil quo!"
-      />
-      <AccordionElement question="¿Cómo te llamas?" answer="pues christian" />
-      <AccordionElement question="¿Cómo te llamas?" answer="pues christian" />
+      {questions &&
+        questions.map((question) => (
+          <AccordionElement
+            key={question.question}
+            question={question.question}
+            answer={question.answer}
+          />
+        ))}
     </li>
   );
 };

@@ -42,14 +42,17 @@ const BaseLayout: React.FC<Props> = ({ children, page, ...rest }) => {
     window.onscroll = () => {};
   }, []);
   return (
-    <>
+    <div className="w-full flex justify-center flex-col">
       <Head seo={page?.seo} />
-      <Menu entries={entriesCte} />
-      <div className="sm:mx-16 mx-8" {...rest}>
-        {children}
+      <Menu className="lg:w-9/12 w-full self-center" entries={entriesCte} />
+      <div
+        className="sm:mx-16 mx-8 flex justify-center flex-col items-center"
+        {...rest}
+      >
+        <div className="w-full lg:w-9/12">{children}</div>
       </div>
       <Footer entries={entriesCte} />
-    </>
+    </div>
   );
 };
 

@@ -16,6 +16,7 @@ export interface EntryProps {
 
 interface Props {
   entries: Array<EntryProps>;
+  className?: string;
 }
 
 const disableScroll = () => {
@@ -28,7 +29,7 @@ function enableScroll() {
   window.onscroll = () => {};
 }
 
-const Menu: React.FC<Props> = ({ entries }) => {
+const Menu: React.FC<Props> = ({ entries, className }) => {
   const [isOpened, setIsOpened] = useState(false);
   const menuRef = useRef(null);
   const hamburgerRef = useRef(null);
@@ -41,7 +42,7 @@ const Menu: React.FC<Props> = ({ entries }) => {
   );
 
   return (
-    <>
+    <div className={className}>
       <div className="sticky top-0 z-50" ref={menuRef}>
         <LeftPanel isOpened={isOpened} />
         <RightPanel entries={entries} isOpened={isOpened} />
@@ -84,7 +85,7 @@ const Menu: React.FC<Props> = ({ entries }) => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 

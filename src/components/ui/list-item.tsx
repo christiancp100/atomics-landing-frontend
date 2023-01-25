@@ -24,7 +24,7 @@ const ListItem: React.FC<Props> = ({ title, children }) => {
           />
         </svg>
 
-        <span>{title}</span>
+        <span className="text-left font-bold">{title}</span>
       </div>
       <slot>{children}</slot>
     </li>

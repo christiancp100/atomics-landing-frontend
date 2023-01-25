@@ -60,9 +60,6 @@ const BlockSection: React.FC<HTMLProps<HTMLDivElement>> = ({
           <Link href="#contact">
             <Button variant="primary">¡Empecemos!</Button>
           </Link>
-          <Link href="/projects">
-            <Button variant="secondary">Ver proyectos</Button>
-          </Link>
         </div>
       </Animated>
       <Animated

@@ -59,6 +59,10 @@ const Contact = () => {
     >
       <h2 className="text-4xl font-semibold text-center sm:text-left">
         <span className="text-header-gradient">Creemos</span> algo juntos
+        <span className="block text-sm mt-2 font-normal">
+          Ponte en contacto con nosotros para llevar tu negocio al siguiente
+          nivel.
+        </span>
       </h2>
       <div className="flex">
         <Animated animation={animations.fadeRight}>
